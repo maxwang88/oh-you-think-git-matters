@@ -17,7 +17,7 @@ call('git remote add origin https://' + username + ':' + password + '@github.com
 time = '12:00:00'
 offset = '-0500'
 minimum = 0
-maximum = 15
+maximum = 10
 filename = 'README.md'
 message = 'test'
 
