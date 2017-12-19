@@ -17,7 +17,7 @@ call('git remote add origin https://' + username + ':' + password + '@github.com
 time = '12:00:00'
 offset = '-0500'
 minimum = 0
-maximum = 50
+maximum = 15
 filename = 'README.md'
 message = 'test'
 
@@ -47,6 +47,9 @@ if hasTemplate:
 		rowCounter = rowCounter + timedelta(days=1)
 else:
 	for i in range(0, 365):
+		if randint(minimum, maximum) < 2:
+			current = current + timedelta(days=1)
+			continue
 		for k in range(0, randint(minimum, maximum)):
 			complete = str(current) + half + ':' + str(k + 1)
 			readme = open(filename, 'w+')
