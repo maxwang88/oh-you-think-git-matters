@@ -17,12 +17,12 @@ call('git remote add origin https://' + username + ':' + password + '@github.com
 time = '12:00:00'
 offset = '-0500'
 minimum = 0
-maximum = 10
+maximum = 7
 filename = 'README.md'
 message = 'test'
 
 half = ' ' + time + ' ' + offset
-current = date.today() - timedelta(days=365)
+current = date.today() - timedelta(days=65)
 if hasTemplate:
 	while current.weekday() != 6:
 		current = current + timedelta(days=1)
